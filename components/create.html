@@ -4,53 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/coffee-cup.png" type="image/x-icon">
     <link rel="stylesheet" href="create.css">
-    <link rel="Shortcut icon" href="/assets/logo1.jpg">
-    <title>Create</title>
+    <link rel="shortcut icon" href="../assets/logo1.jpg" type="image/x-icon">
+    <title>Create | TRUYENHAY</title>
 </head>
 
-<body>
-    <div class="img-background">
-        <img src="/assets/wallpaperflare.com_wallpaper (1).jpg">
+<body class="create-page">
+    <div class="video-background">
+        <img src="../assets/wallpaperflare.com_wallpaper (1).jpg" alt="background">
     </div>
 
-    <div class="form-container">
-        <div class="form-header">
-            <h1>Tạo truyện mới</h1>
-        </div>
-        <form>
-            <div class="form-content">
-                <div class="form-column">
-                    <div class="form-group">
-                        <label for="tieuDe">Tiêu Đề</label>
-                        <input type="text" id="tieuDe" name="tieuDe" required>
+    <main class="create-shell">
+        <section class="create-panel">
+            <header class="create-header">
+                <a href="../index.html" class="brand-logo">
+                    <img src="../assets/logo1.jpg" alt="Logo">
+                    <span>TRUYENHAY</span>
+                </a>
+                <h1>Tạo Truyện Mới</h1>
+                <p>Điền thông tin để đăng truyện lên hệ thống.</p>
+            </header>
+
+            <form class="create-form">
+                <div class="form-content">
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label class="field-label" for="tieuDe">Tiêu đề</label>
+                            <input type="text" id="tieuDe" name="tieuDe" placeholder="Ví dụ: Đại Chúa Tể" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="field-label" for="theLoai">Thể loại</label>
+                            <input type="text" id="theLoai" name="theLoai" placeholder="Fantasy, Action" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="field-label" for="tacGia">Tác giả</label>
+                            <input type="text" id="tacGia" name="tacGia" placeholder="Tên tác giả" required>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="theLoai">Thể Loại</label>
-                        <input type="text" id="theLoai" name="theLoai" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="tacGia">Tác Giả</label>
-                        <input type="text" id="tacGia" name="tacGia" required>
+
+                    <div class="form-column">
+                        <div class="form-group">
+                            <label class="field-label" for="moTa">Mô tả</label>
+                            <textarea id="moTa" name="moTa" placeholder="Tóm tắt nội dung truyện..."
+                                required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label class="field-label" for="trangThai">Trạng thái</label>
+                            <input type="text" id="trangThai" name="trangThai" placeholder="Đang cập nhật" required>
+                        </div>
                     </div>
                 </div>
-                <div class="form-column">
-                    <div class="form-group">
-                        <label for="moTa">Mô Tả</label>
-                        <textarea id="moTa" name="moTa" required></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label for="trangThai">Trạng Thái</label>
-                        <input type="text" id="trangThai" name="trangThai" required>
-                    </div>
+
+                <div class="form-actions">
+                    <input type="file" id="fileInput" class="hidden-file-input">
+                    <label for="fileInput" class="upload-pill">Chọn ảnh bìa</label>
+                    <button type="submit" class="btn-primary">Tạo mới</button>
                 </div>
-            </div>
-            <div class="file-input">
-                <input type="file" id="fileInput">
-                <label for="fileInput">Chọn tệp</label>
-            </div>
-            <button type="submit" class="btn-submit">Tạo mới</button>
-        </form>
-    </div>
+            </form>
+        </section>
+    </main>
 </body>
+
+</html>

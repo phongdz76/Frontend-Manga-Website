@@ -9,52 +9,65 @@
     <title>SignUp | TRUYENHAY</title>
 </head>
 
-<body>
+<body class="auth-page">
     <div class="video-background">
         <video autoplay muted loop id="background-video">
-            <source src="../assets/japan-summer-train-moewalls-com.mp4" type="video/mp4">
+            <source src="../assets/Download.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="container">
-        <div class="form-section">
-            <div class="logo">
-                <img src="../assets/logo1.jpg" alt="Logo">
-                <span>Đăng Ký</span>
-            </div>
-            <p>Đăng ký tài khoản của bạn</p>
-            <form>
-                <label for="name">Name *</label>
-                <input type="text" id="name" placeholder="abc" required>
-
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" placeholder="email@example.com" required>
-
-                <label for="password">Password *</label>
-                <input type="password" id="password" placeholder="••••••••" required>
-
-                <a href="./components/login.html">Tạo tài khoản</a>
-            </form>
-            <div class="social-login">
-                <a href="#" class="social-btn">
-                    <img src="../assets/search.png" alt="Google">
-                    Google
+    <main class="auth-shell">
+        <section class="auth-card auth-card--signup">
+            <div class="auth-content">
+                <a href="../index.html" class="brand-logo">
+                    <img src="../assets/logo1.jpg" alt="Logo">
+                    <span>TRUYENHAY</span>
                 </a>
-                <a href="#" class="social-btn">
-                    <img src="../assets/facebook.png" alt="Facebook">
-                    Facebook
-                </a>
+                <h1 class="auth-title">Đăng Ký</h1>
+                <p class="auth-subtitle">Đăng ký tài khoản của bạn</p>
+
+                <form class="auth-form">
+                    <div>
+                        <label class="field-label" for="name">Họ và tên</label>
+                        <input type="text" id="name" placeholder="Nguyen Van A" required>
+                    </div>
+
+                    <div>
+                        <label class="field-label" for="email">Email</label>
+                        <input type="email" id="email" placeholder="email@example.com" required>
+                    </div>
+
+                    <div>
+                        <label class="field-label" for="password">Mật khẩu</label>
+                        <input type="password" id="password" placeholder="••••••••" required>
+                    </div>
+
+                    <a href="./login.html" class="btn-primary">Tạo tài khoản</a>
+                </form>
+
+                <div class="social-login">
+                    <a href="#" class="social-btn">
+                        <img src="../assets/search.png" alt="Google">
+                        Google
+                    </a>
+                    <a href="#" class="social-btn">
+                        <img src="../assets/facebook.png" alt="Facebook">
+                        Facebook
+                    </a>
+                </div>
+
+                <div class="meta-link">
+                    Bạn đã có tài khoản? <a class="text-link" href="./login.html">Đăng nhập</a>
+                </div>
             </div>
-            <div class="login-link">
-                Bạn đã có tài khoản! <a href="login.html">Đăng nhập</a>
+
+            <div class="auth-media">
+                <video class="auth-video" loop autoplay muted>
+                    <source src="../assets/waifu.mp4" type="video/mp4">
+                </video>
             </div>
-        </div>
-        <div class="right-panel">
-            <video class="tiktok-video" loop autoplay muted>
-                <source src="../assets/waifu.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
 
 </html>

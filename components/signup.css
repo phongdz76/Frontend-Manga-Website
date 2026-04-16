@@ -1,189 +1,21 @@
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-family: Arial, sans-serif;
-}
-.video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    overflow: hidden;
-}
-#background-video {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-}
-.container {
-    display: flex;
-    position: absolute;
-    top: 3%;
-    left: 20%;
-    background-color: rgba(49, 49, 49, 0.421);
-    backdrop-filter: blur(50px);
-    border-radius: 10px;
-    overflow: hidden;
-    width: 890px;
-    height: 650px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-.form-section {
-    flex: 1;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.image-section {
-    flex: 1;
-    background-color: #fc4748;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-.image-section video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.logo {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.2rem;
-    margin-bottom: 20px;
-}
-.logo img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.logo span {
-    font-size: 30px;
-    color: #ffffff;
-    font-weight: bold;
-}
-.form-section p{
-    margin-top: 1px;
-    color: #ccc;
-}
-form {
-    display: flex;
-    flex-direction: column;
-}
-label {
-    color: #f0f0f0;
-    font-size: 14px;
-    font-weight: 550;
-    margin-bottom: 5px;
-}
-input {
-    padding: 12px;
-    margin-bottom: 15px;
-    outline: none;
-    color: white;
-    border: 3px solid #ccc;
-    background-color: rgba(49, 49, 49, 0.421);
-    backdrop-filter: blur(50px);
-    transition: 200ms;
-    border-radius: 20px;
-    font-size: 16px;
-}
-input:focus{
-    border: 3px solid #fc4748;
-    color: #ffffff;
-}
-a[href="/components/login.html"] {
-    background-color: #fc4748;
-    color: white;
-    padding: 14px;
-    border: none;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 30px;
-    font-weight: 550;
-    cursor: pointer;
-    font-size: 15px;
-    transition: background-color 0.3s;
-}
-a[href="/components/login.html"]:hover{
-    background-color: #f0f0f0;
-    opacity: 0.9;
-    color: black;
-}
-.social-login {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-.social-btn {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    color: #ffffff;
-    border: 1px solid #ddd;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: 550;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.social-btn:hover {
-    background-color: #f0f0f0;
-    color: #000000;
-}
-.social-btn img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+@import url('./shared/theme.css');
+@import url('./shared/auth-layout.css');
+
+.auth-card--signup {
+    grid-template-columns: minmax(360px, 1.05fr) minmax(300px, 0.95fr);
 }
 
-.login-link {
-    text-align: center;
-    margin-top: 20px;
-    color: #ddd;
-    font-size: 14px;
-}
-.login-link a {
-    color: #fc4748;
-    text-decoration: none;
-    font-weight: bold;
-}
-.login-link a:hover{
-    text-decoration: underline;
-}
-.right-panel {
-    background-color: #fc4748;
-    color: white;
-    padding: 40px;
-    width: 40%;
-    position: relative;
+.auth-card--signup .auth-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
-.tiktok-video {
-    margin-top: 10%;
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
+
+.auth-card--signup .social-login {
+    margin-top: 16px;
+}
+
+.auth-card--signup .auth-media {
+    background: linear-gradient(180deg, rgba(241, 87, 59, 0.9), rgba(171, 37, 60, 0.9));
 }
 

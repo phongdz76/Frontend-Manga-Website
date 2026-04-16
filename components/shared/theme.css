@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Teko:wght@500;600;700&display=swap');
+
+:root {
+    --bg-primary: #07090d;
+    --bg-secondary: #11161e;
+    --bg-surface: rgba(16, 23, 33, 0.84);
+    --bg-soft: rgba(255, 255, 255, 0.06);
+    --text-main: #eef2f9;
+    --text-muted: #acb8cc;
+    --accent: #fc4748;
+    --accent-soft: #ff6f6f;
+    --line: rgba(255, 255, 255, 0.12);
+    --radius-sm: 12px;
+    --radius-md: 18px;
+    --radius-lg: 26px;
+    --shadow-card: 0 24px 70px rgba(0, 0, 0, 0.48);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    color: var(--text-main);
+}
+
+a {
+    color: inherit;
+}
+
+.video-background {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.video-background::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 15% 20%, rgba(252, 71, 72, 0.34), transparent 46%),
+        radial-gradient(circle at 80% 5%, rgba(255, 184, 77, 0.18), transparent 40%),
+        linear-gradient(125deg, rgba(6, 8, 13, 0.9), rgba(8, 11, 17, 0.72));
+    pointer-events: none;
+}
+
+.video-background video,
+.video-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    margin-bottom: 18px;
+}
+
+.brand-logo img {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.brand-logo span {
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 0.08em;
+    color: #ffce56;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.field-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: 2px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    background: rgba(8, 12, 18, 0.6);
+    color: var(--text-main);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #8997af;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--accent-soft);
+    box-shadow: 0 0 0 4px rgba(252, 71, 72, 0.2);
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 46px;
+    border-radius: 999px;
+    background: linear-gradient(120deg, var(--accent), #ff7a55);
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    filter: saturate(1.08);
+    box-shadow: 0 10px 24px rgba(252, 71, 72, 0.32);
+}
+
+.text-link {
+    color: #ff9090;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.social-login {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.04);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.social-btn img {
+    width: 20px;
+    height: 20px;
+}
+
+.social-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
+}
+
+.meta-link {
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    text-align: center;
+}
+
+@media (max-width: 640px) {
+    .brand-logo {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .brand-logo span {
+        font-size: 1.8rem;
+    }
+
+    .social-login {
+        grid-template-columns: 1fr;
+    }
+}

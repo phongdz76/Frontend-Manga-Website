@@ -5,33 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="forgot.css">
-    <link rel="Shortcut icon" href="/assets/logo1.jpg">
+    <link rel="shortcut icon" href="../assets/logo1.jpg" type="image/x-icon">
     <title>Forgot-password | TRUYENHAY</title>
 </head>
 
-<div class="video-background">
-    <video autoplay muted loop id="background-video">
-        <source src="../assets/japan-summer-train-moewalls-com.mp4" type="video/mp4">
-    </video>
-</div>
-
-<body>
-    <div class="container">
-        <div class="logo">
-            <img src="./assets/logo1.jpg" alt="Logo">
-            <span>Quên mật khẩu</span>
-        </div>
-
-        <form>
-            <div class="form-group">
-                <label for="email">Email *</label>
-                <input type="email" id="email" placeholder="email@example.com">
-            </div>
-            <a href="./components/reset password.html">Khôi phục mật khẩu</a>
-        </form>
-        
-        <div class="signup-link">
-            Bạn không có tài khoản? <a href="./components/signup.html">Đăng ký</a>
-        </div>
+<body class="auth-page">
+    <div class="video-background">
+        <video autoplay muted loop id="background-video">
+            <source src="../assets/Download.mp4" type="video/mp4">
+        </video>
     </div>
+
+    <main class="auth-shell">
+        <section class="auth-card auth-card--compact auth-card--forgot">
+            <div class="auth-content">
+                <a href="../index.html" class="brand-logo">
+                    <img src="../assets/logo1.jpg" alt="Logo">
+                    <span>TRUYENHAY</span>
+                </a>
+                <h1 class="auth-title">Quên Mật Khẩu</h1>
+                <p class="auth-subtitle">Nhập email để nhận mã khôi phục tài khoản.</p>
+
+                <form class="auth-form">
+                    <div>
+                        <label class="field-label" for="email">Email</label>
+                        <input type="email" id="email" placeholder="email@example.com" required>
+                    </div>
+                    <a class="btn-primary" href="./reset password.html">Khôi phục mật khẩu</a>
+                </form>
+
+                <div class="meta-link">
+                    Bạn không có tài khoản? <a class="text-link" href="./signup.html">Đăng ký</a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
+</html>

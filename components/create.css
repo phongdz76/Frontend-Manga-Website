@@ -1,129 +1,129 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@import url('./shared/theme.css');
+
+.create-page {
     min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.create-shell {
+    min-height: 100vh;
+    padding: 28px;
+    display: grid;
+    place-items: center;
+}
+
+.create-panel {
+    width: min(980px, 100%);
+    border-radius: 24px;
+    border: 1px solid var(--line);
+    background: rgba(10, 14, 22, 0.86);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.5);
+    padding: 28px;
+}
+
+.create-header {
+    margin-bottom: 24px;
+}
+
+.create-header h1 {
     margin: 0;
-    padding: 20px;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 2.4rem;
 }
-.img-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    overflow: hidden;
+
+.create-header p {
+    margin: 2px 0 0;
+    color: var(--text-muted);
 }
-#img-video {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+
+.create-form {
+    display: grid;
+    gap: 18px;
 }
-.img-background img{
-    width: 100%;
-    height: 100%;
+
+.form-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
 }
-.form-container {
-    padding: 40px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 600px;
-    background-color: rgba(170, 170, 170, 0.421);
-    backdrop-filter: blur(50px);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+
+.form-column {
+    display: grid;
+    gap: 14px;
 }
-.form-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-h1 {
-    margin: 0;
-    color: #333;
-    font-size: 36px;
-    background: #fc4748;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
+
 .form-group {
-    margin-bottom: 15px;
+    display: grid;
+    gap: 8px;
 }
-label {
-    display: block;
-    color: #333;
-    font-size: 16px;
-    font-weight: 550;
-    margin-bottom: 5px;
-}
-input, textarea {
-    width: 95%  ;
-    padding: 12px;
-    margin-bottom: 15px;
-    outline: none;
-    color: black;
-    border: 3px solid #d9d9d9;
-    background-color: rgb(255, 255, 255);
-    backdrop-filter: blur(50px);
-    transition: 200ms;
-    border-radius: 20px;
-    font-size: 16px;
-}
-input:focus, textarea:focus {
-    border: 3px solid #fc4748;
-    color: #000000;
-}
+
 textarea {
+    min-height: 148px;
     resize: vertical;
-    min-height: 120px;
 }
-.file-input {
-    margin-bottom: 25px;
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
-.file-input input {
+
+.hidden-file-input {
     display: none;
 }
-.file-input label {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #fc4748;
-    color: white;
-    border-radius: 10px;
+
+.upload-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
     cursor: pointer;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
-.file-input label:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+.upload-pill:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-1px);
 }
-.btn-submit {
-    background: #fc4748;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: 700;
-    transition: all 0.3s ease;
-    display: block;
-    width: 100%;
-    text-align: center;
+
+.form-actions .btn-primary {
+    width: auto;
+    min-width: 180px;
 }
-.btn-submit:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    opacity: 0.9;
-    color: black;
+
+@media (max-width: 860px) {
+    .form-content {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-actions .btn-primary,
+    .upload-pill {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .create-shell {
+        padding: 14px;
+    }
+
+    .create-panel {
+        padding: 20px;
+    }
+
+    .create-header h1 {
+        font-size: 2rem;
+    }
 }

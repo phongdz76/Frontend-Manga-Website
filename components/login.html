@@ -5,56 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="login.css">
-    <link rel="Shortcut icon" href="../assets/logo1.jpg">
+    <link rel="shortcut icon" href="../assets/logo1.jpg" type="image/x-icon">
     <title>Login | TRUYENHAY</title>
 </head>
 
-<body>
+<body class="auth-page">
     <div class="video-background">
         <video autoplay muted loop id="background-video">
-            <source src="../assets/japan-summer-train-moewalls-com.mp4" type="video/mp4">
+            <source src="../assets/Download.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="container">
-        <div class="left-panel">
-            <video class="tiktok-video" loop autoplay muted>
-                <source src="../assets/Download.mp4" type="video/mp4">
-            </video>
-        </div>
-        
-        <div class="right-panel">
-            <div class="logo">
-                <img src="../assets/logo1.jpg" alt="logo">
+    <main class="auth-shell">
+        <section class="auth-card auth-card--login">
+            <div class="auth-media">
+                <video class="auth-video" loop autoplay muted>
+                    <source src="../assets/Download.mp4" type="video/mp4">
+                </video>
             </div>
-            <h2>Đăng Nhập</h2>
-            <p>Đăng nhập tài khoản của bạn</p>
-            <form>
-                <input type="email" placeholder="Email address" required>
-                <input type="password" placeholder="Password" required>
-                <div class="forgot-password">
-                    <a href="./components/forgot.html">Quên mật khẩu?</a>
+
+            <div class="auth-content">
+                <a href="../index.html" class="brand-logo">
+                    <img src="../assets/logo1.jpg" alt="logo">
+                    <span>TRUYENHAY</span>
+                </a>
+                <h1 class="auth-title">Đăng Nhập</h1>
+                <p class="auth-subtitle">Đăng nhập tài khoản của bạn</p>
+
+                <form class="auth-form">
+                    <div>
+                        <label class="field-label" for="login-email">Email</label>
+                        <input id="login-email" type="email" placeholder="email@example.com" required>
+                    </div>
+                    <div>
+                        <label class="field-label" for="login-password">Mật khẩu</label>
+                        <input id="login-password" type="password" placeholder="••••••••" required>
+                    </div>
+                    <div class="form-row form-row--end">
+                        <a class="text-link" href="./forgot.html">Quên mật khẩu?</a>
+                    </div>
+                    <a href="../index.html" class="btn-primary">Đăng nhập</a>
+                </form>
+
+                <div class="social-login">
+                    <a href="#" class="social-btn">
+                        <img src="../assets/search.png" alt="Google">
+                        Google
+                    </a>
+                    <a href="#" class="social-btn">
+                        <img src="../assets/facebook.png" alt="Facebook">
+                        Facebook
+                    </a>
                 </div>
-                <a href="./index.html">Đăng nhập</a>
-            </form>
 
-            <div class="social-login">
-                <a href="#" class="social-btn">
-                    <img src="../assets/search.png" alt="Google">
-                    Google
-                </a>
-                <a href="#" class="social-btn">
-                    <img src="../assets/facebook.png" alt="Facebook">
-                    Facebook
-                </a>
+                <div class="meta-link">
+                    Bạn không có tài khoản? <a class="text-link" href="./signup.html">Đăng ký</a>
+                </div>
             </div>
-            <div class="signup-link">
-                <p>Bạn không có tài khoản? <a href="signup.html">Đăng ký</a></p>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 </body>
-
-
 
 </html>

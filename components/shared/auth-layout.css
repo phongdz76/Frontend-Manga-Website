@@ -1,0 +1,129 @@
+.auth-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+}
+
+.auth-shell {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 28px;
+}
+
+.auth-card {
+    width: min(980px, 100%);
+    display: grid;
+    grid-template-columns: minmax(260px, 0.9fr) minmax(360px, 1.1fr);
+    border-radius: var(--radius-lg);
+    background: var(--bg-surface);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    position: relative;
+}
+
+.auth-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(150deg, rgba(255, 255, 255, 0.08), transparent 45%);
+    pointer-events: none;
+}
+
+.auth-media {
+    padding: 28px;
+    background: linear-gradient(170deg, rgba(252, 71, 72, 0.9), rgba(176, 34, 40, 0.9));
+}
+
+.auth-video {
+    width: 100%;
+    height: 100%;
+    min-height: 460px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+}
+
+.auth-content {
+    padding: 34px;
+    background: linear-gradient(185deg, rgba(17, 22, 30, 0.95), rgba(10, 13, 20, 0.95));
+}
+
+.auth-title {
+    margin: 0;
+    font-family: 'Teko', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 2.1rem;
+    color: #ffffff;
+}
+
+.auth-subtitle {
+    margin: 4px 0 20px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.auth-form {
+    display: grid;
+    gap: 12px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+}
+
+.form-row--end {
+    justify-content: flex-end;
+    margin-top: -4px;
+    margin-bottom: 4px;
+}
+
+.auth-card--compact {
+    width: min(470px, 100%);
+    grid-template-columns: 1fr;
+}
+
+.auth-card--compact .auth-content {
+    padding: 32px;
+}
+
+.auth-card--compact .auth-title,
+.auth-card--compact .auth-subtitle,
+.auth-card--compact .brand-logo {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .auth-card {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-media {
+        padding: 24px;
+    }
+
+    .auth-video {
+        min-height: 280px;
+        max-height: 340px;
+    }
+}
+
+@media (max-width: 640px) {
+    .auth-shell {
+        padding: 14px;
+    }
+
+    .auth-content,
+    .auth-media,
+    .auth-card--compact .auth-content {
+        padding: 22px;
+    }
+
+    .auth-title {
+        font-size: 1.8rem;
+    }
+}
